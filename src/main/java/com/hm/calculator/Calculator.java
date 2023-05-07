@@ -1,4 +1,4 @@
-package com.hm.calculatot;
+package com.hm.calculator;
 
 public class Calculator {
     public static void main(String[] args) {
@@ -14,6 +14,13 @@ public class Calculator {
 
         return newValues;
 
+    }
+
+    public int divide(int x, int y){
+        if (y==0){
+            throw new IllegalArgumentException("Ints can not be divided by zero");
+        }
+        return x/y;
     }
 
     }
