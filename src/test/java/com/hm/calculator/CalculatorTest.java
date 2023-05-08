@@ -32,7 +32,7 @@ class CalculatorTest {
         assertEquals(expected,actual);
     }
 
-       @Test
+    @Test
     public void isEven(){
         boolean actual = calculator.isEven(2);
         assertTrue(actual);
