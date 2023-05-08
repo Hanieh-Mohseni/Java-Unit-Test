@@ -1,8 +1,10 @@
 package bookingSystem;
 
+import com.hm.calculator.Calculator;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assumptions.assumeTrue;
 
 class BookingSystemTest {
     BookingSystem bookingSystem = new BookingSystem();
@@ -35,6 +37,17 @@ class BookingSystemTest {
         String actual = exception.getMessage();
         assertEquals(expected,actual);
 
+    }
+
+    @Test
+    void applyDiscount(){
+        Calculator calculator = new Calculator();
+        //By using assumption, if this part fail the test will skip the rest parts
+        assumeTrue(calculator.divide(bookingSystem.getBookingPrice(),2)==15);
+
+        int expected = 20;
+        int actual = bookingSystem.applyDiscount();
+        assertEquals(expected,actual);
 
     }
 

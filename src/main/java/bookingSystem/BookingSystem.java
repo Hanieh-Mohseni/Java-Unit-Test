@@ -1,8 +1,12 @@
 package bookingSystem;
 
+import com.hm.calculator.Calculator;
+
 public class BookingSystem {
 
    private  String[] openingDays = {"Monday","Tuesday"};
+   private  int bookingPrice=30;
+   private Calculator calculator = new Calculator();
 
    public String[] getOpeningDays(){
        return  openingDays;
@@ -16,6 +20,14 @@ public class BookingSystem {
            return true;
        else
            return false;
+   }
+
+   public int getBookingPrice(){
+       return bookingPrice;
+   }
+
+   public int applyDiscount(){
+       return calculator.divide(bookingPrice,2)+5;
    }
 
 }
