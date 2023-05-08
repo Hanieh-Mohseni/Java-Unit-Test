@@ -32,9 +32,11 @@ class CalculatorTest {
         assertEquals(expected,actual);
     }
 
-    @Test
-    public void isEven(){
-        boolean actual = calculator.isEven(2);
+    //These annotations are used to have parameterized test
+    @ParameterizedTest
+    @ValueSource(ints={2,-2,-10000,20000})
+    public void isEven(int number){
+        boolean actual = calculator.isEven(number);
         assertTrue(actual);
     }
 
