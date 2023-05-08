@@ -4,11 +4,13 @@ import com.hm.calculator.Calculator;
 
 public class BookingSystem {
 
-   private  String[] openingDays = {"Monday","Tuesday"};
    private  int bookingPrice=30;
    private Calculator calculator = new Calculator();
 
-   public String[] getOpeningDays(){
+    private  String[] openingDays = {"Monday","Tuesday"};
+
+
+    public String[] getOpeningDays(){
        return  openingDays;
    }
 
