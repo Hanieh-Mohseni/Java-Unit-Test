@@ -1,6 +1,8 @@
 package com.hm.calculator;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -28,5 +30,17 @@ class CalculatorTest {
         String expected = "Ints can not be divided by zero";
         String actual = exception.getMessage();
         assertEquals(expected,actual);
+    }
+
+       @Test
+    public void isEven(){
+        boolean actual = calculator.isEven(2);
+        assertTrue(actual);
+    }
+
+    @Test
+    public void isOdd(){
+        boolean actual = calculator.isEven(3);
+        assertFalse(actual);
     }
 }
